@@ -18,3 +18,7 @@ python-dotenv
 
 # タイムゾーン(日本時間)のデータ。Windowsで日本時間を扱うのに必要
 tzdata
+
+# 音声処理ツールffmpegの同梱版。MP3の結合とジングル挿入に使う
+# (これを入れておけば、PCにffmpegをインストールしなくても動く)
+imageio-ffmpeg

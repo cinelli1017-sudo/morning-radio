@@ -84,7 +84,13 @@ def main() -> None:
     # --- 3. 音声合成 -----------------------------------------------------
     print("=== 3/4 音声合成(edge-tts) ===")
     mp3_filename = f"{date_str}.mp3"
-    synthesize(script_lines, config["voices"], site_dir / "episodes" / mp3_filename)
+    synthesize(
+        script_lines,
+        config["voices"],
+        site_dir / "episodes" / mp3_filename,
+        jingle_path=PROJECT_DIR / "assets" / "jingle.mp3",
+        pause_path=PROJECT_DIR / "assets" / "pause.mp3",
+    )
 
     # --- 4. ポッドキャストフィード更新 -------------------------------------
     print("=== 4/4 フィード更新 ===")

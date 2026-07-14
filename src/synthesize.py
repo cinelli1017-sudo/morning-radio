@@ -35,10 +35,35 @@ def _find_ffmpeg() -> str | None:
         return None
 
 
+# 音声が「1文字あたり最低このバイト数」を下回ったら、通信が途中で切れたと判断する
+# (48kbpsのMP3では1文字=約0.2秒=約1200バイトが目安。その1/4を下限にしている)
+MIN_BYTES_PER_CHAR = 300
+
+
 async def _synthesize_one(text: str, voice: str, output_path: Path) -> None:
-    """1つのセリフを1つのMP3ファイルにする。"""
-    communicate = edge_tts.Communicate(text, voice)
-    await communicate.save(str(output_path))
+    """
+    1つのセリフを1つのMP3ファイルにする。
+
+    edge-ttsは無料サービスのため、まれに通信が途中で切れて短い音声しか
+    保存されないことがある。ファイルサイズで異常を検知し、最大3回やり直す。
+    """
+    min_bytes = len(text) * MIN_BYTES_PER_CHAR
+    last_error = None
+    for attempt in range(3):
+        try:
+            communicate = edge_tts.Communicate(text, voice)
+            await communicate.save(str(output_path))
+            if output_path.stat().st_size >= min_bytes:
+                return
+            last_error = RuntimeError(
+                f"音声が短すぎます({output_path.stat().st_size}バイト < 期待{min_bytes}バイト)"
+            )
+        except Exception as error:
+            last_error = error
+        # 少し待ってからやり直す(待ち時間は回数ごとに延ばす)
+        await asyncio.sleep(2 * (attempt + 1))
+        print(f"[synthesize] リトライ {attempt + 1}/3: 「{text[:20]}...」")
+    raise RuntimeError(f"音声合成に3回失敗しました: {last_error}")
 
 
 async def _synthesize_all(script_lines: list[dict], voices: dict, part_dir: Path) -> list[Path]:
@@ -62,20 +87,38 @@ def _concat_with_ffmpeg(ffmpeg: str, part_paths: list[Path], output_path: Path) 
     lines = [f"file '{p.as_posix()}'" for p in part_paths]
     list_file.write_text("\n".join(lines), encoding="utf-8")
 
-    subprocess.run(
+    # 「-c copy(無変換で繋ぐ)」はffmpegのバージョンによって、由来の違うMP3が
+    # 混ざると音声を取りこぼすことがあった(GitHub Actions上で発生)。
+    # そのため一度デコードして繋ぎ直す方式にしている(10分の音声でも数秒で終わる)
+    result = subprocess.run(
         [
             ffmpeg,
             "-y",                     # 出力先が既にあっても上書きする
             "-f", "concat",           # 「ファイル一覧を結合するモード」を指定
             "-safe", "0",             # 一覧内の絶対パスを許可する
             "-i", str(list_file),
-            "-c", "copy",             # 再エンコードせずそのまま繋ぐ(速くて音質劣化なし)
+            "-c:a", "libmp3lame",     # MP3として再エンコード
+            "-b:a", "48k",
+            "-ar", "24000",
+            "-ac", "1",
             str(output_path),
         ],
         check=True,
         capture_output=True,
+        text=True,
     )
     list_file.unlink()
+
+    # 結合結果の検証: 出力が入力合計より大幅に小さければ、どこかで音声が
+    # 欠落しているので、壊れた音声を配信しないようエラーで止める
+    total_input = sum(p.stat().st_size for p in part_paths)
+    output_size = output_path.stat().st_size
+    if output_size < total_input * 0.6:
+        print("[synthesize] ffmpegの警告出力(末尾):")
+        print("\n".join(result.stderr.splitlines()[-15:]))
+        raise RuntimeError(
+            f"結合後の音声が短すぎます(入力合計{total_input}バイト → 出力{output_size}バイト)。"
+        )
 
 
 def _concat_binary(part_paths: list[Path], output_path: Path) -> None:

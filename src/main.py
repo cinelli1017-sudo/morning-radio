@@ -18,6 +18,7 @@ import argparse
 from datetime import datetime
 import json
 from pathlib import Path
+import shutil
 import sys
 from zoneinfo import ZoneInfo
 
@@ -50,6 +51,12 @@ def main() -> None:
 
     site_dir = PROJECT_DIR / args.output
     site_dir.mkdir(parents=True, exist_ok=True)
+
+    # 番組アートワーク(assets/cover.png)を公開フォルダにコピーする
+    # (Apple Podcastsはアートワークが無い番組のフォローを拒否することがあるため)
+    cover_src = PROJECT_DIR / "assets" / "cover.png"
+    if cover_src.exists():
+        shutil.copy(cover_src, site_dir / "cover.png")
 
     today = datetime.now(ZoneInfo("Asia/Tokyo"))
     date_str = today.strftime("%Y-%m-%d")

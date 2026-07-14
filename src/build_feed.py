@@ -106,6 +106,7 @@ def add_episode_and_build_feed(site_dir: Path, mp3_filename: str, title: str,
     )
 
     _write_feed_xml(site_dir / "feed.xml", episodes, base_url, program)
+    _write_index_html(site_dir / "index.html", episodes, base_url, program)
     print(f"[build_feed] feed.xml を更新しました(エピソード数: {len(episodes)})")
     print(f"[build_feed] 購読用URL: {base_url}/feed.xml")
 
@@ -140,17 +141,93 @@ def _write_feed_xml(feed_path: Path, episodes: list[dict], base_url: str, progra
       <itunes:duration>{duration}</itunes:duration>
     </item>""")
 
+    # itunes:image(番組アートワーク)とitunes:categoryは、
+    # Apple Podcastsが番組を受け付けるためのほぼ必須項目
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{title}</title>
     <description>{description}</description>
     <link>{base_url}</link>
     <language>{language}</language>
+    <atom:link href="{base_url}/feed.xml" rel="self" type="application/rss+xml"/>
     <itunes:author>{author}</itunes:author>
     <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="{base_url}/cover.png"/>
+    <itunes:category text="News">
+      <itunes:category text="Business News"/>
+    </itunes:category>
+    <image>
+      <url>{base_url}/cover.png</url>
+      <title>{title}</title>
+      <link>{base_url}</link>
+    </image>
 {chr(10).join(items)}
   </channel>
 </rss>
 """
     feed_path.write_text(xml, encoding="utf-8")
+
+
+def _write_index_html(index_path: Path, episodes: list[dict], base_url: str, program: dict) -> None:
+    """
+    購読用の案内ページ(index.html)を作る。
+
+    iPhoneのSafariでこのページを開けば、URLを手で打たなくても
+    ボタンのタップだけでポッドキャストアプリに登録できる。
+    ブラウザ上でそのまま再生できるプレーヤーも付けている。
+    """
+    title = escape(program.get("title", "モーニングラジオ"))
+    feed_url = f"{base_url}/feed.xml"
+    # 「podcast://」で始まるリンクは、iPhoneでApple Podcastsアプリを直接開く
+    podcast_link = feed_url.replace("https://", "podcast://")
+
+    episode_items = []
+    for ep in episodes:
+        mp3_url = f"{base_url}/episodes/{ep['filename']}"
+        minutes = ep["duration_seconds"] // 60
+        episode_items.append(f"""      <li>
+        <p><strong>{escape(ep['title'])}</strong>(約{minutes}分)</p>
+        <audio controls preload="none" src="{mp3_url}"></audio>
+      </li>""")
+
+    html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<style>
+  body {{ font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 16px; background: #1a1a2e; color: #eee; }}
+  img.cover {{ width: 180px; border-radius: 16px; display: block; margin: 16px auto; }}
+  h1 {{ text-align: center; font-size: 1.4rem; }}
+  .btn {{ display: block; text-align: center; background: #e97451; color: #fff; text-decoration: none;
+         padding: 14px; border-radius: 10px; margin: 10px 0; font-weight: bold; border: none;
+         width: 100%; font-size: 1rem; cursor: pointer; }}
+  .note {{ color: #aaa; font-size: 0.85rem; }}
+  ul {{ list-style: none; padding: 0; }}
+  li {{ background: #26264a; border-radius: 10px; padding: 12px; margin: 10px 0; }}
+  audio {{ width: 100%; }}
+  code {{ background: #333; padding: 2px 6px; border-radius: 4px; word-break: break-all; }}
+</style>
+</head>
+<body>
+  <img class="cover" src="cover.png" alt="番組アートワーク">
+  <h1>{title}</h1>
+
+  <a class="btn" href="{podcast_link}">Apple Podcastsでフォローする</a>
+  <button class="btn" onclick="navigator.clipboard.writeText('{feed_url}').then(()=>alert('コピーしました'))">
+    フィードURLをコピーする
+  </button>
+  <p class="note">上のボタンで開けない場合は、コピーしたURLをポッドキャストアプリの
+  「URLで番組をフォロー」に貼り付けてください。<br>
+  フィードURL: <code>{feed_url}</code></p>
+
+  <h2>エピソード</h2>
+  <ul>
+{chr(10).join(episode_items)}
+  </ul>
+</body>
+</html>
+"""
+    index_path.write_text(html, encoding="utf-8")

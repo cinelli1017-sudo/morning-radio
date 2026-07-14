@@ -1,0 +1,20 @@
+# RSSフィード(ニュースの配信データ)を読み込むためのライブラリ
+feedparser
+
+# RSSの取得に使うHTTP通信ライブラリ(タイムアウトを細かく指定できるようにするため)
+requests
+
+# Claude API(Anthropic)を呼び出すための公式ライブラリ
+anthropic
+
+# Microsoft Edgeの読み上げ音声(無料)で音声合成するためのライブラリ
+edge-tts
+
+# config.yaml(設定ファイル)を読み込むためのライブラリ
+pyyaml
+
+# .env ファイル(APIキーなどの秘密情報)を読み込むためのライブラリ
+python-dotenv
+
+# タイムゾーン(日本時間)のデータ。Windowsで日本時間を扱うのに必要
+tzdata

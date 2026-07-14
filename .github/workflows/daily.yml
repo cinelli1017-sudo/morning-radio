@@ -1,0 +1,64 @@
+# =====================================================================
+# 毎朝ラジオ番組を自動生成して、GitHub Pagesで配信するワークフロー
+#
+# 【流れ】
+# 1. 毎朝5時(日本時間)ごろに自動起動(Actionsの画面から手動実行も可能)
+# 2. これまでのエピソード(gh-pagesブランチ)を作業フォルダに取り出す
+# 3. Pythonでニュース収集→台本生成→音声合成→feed.xml更新
+# 4. gh-pagesブランチへ公開(force_orphan: 履歴を1コミットに保ち容量節約)
+# =====================================================================
+name: daily-radio
+
+on:
+  schedule:
+    # GitHub Actionsの時刻はUTC(世界標準時)。20:00 UTC = 翌朝5:00 JST
+    # ※混雑状況により数分〜数十分遅れることがあります
+    - cron: "0 20 * * *"
+  # Actionsのページから「Run workflow」ボタンで手動実行できるようにする
+  workflow_dispatch:
+
+permissions:
+  contents: write  # gh-pagesブランチへの書き込みに必要
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: リポジトリを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonをセットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: ライブラリをインストール
+        run: pip install -r requirements.txt
+
+      # 過去のエピソードを残すため、公開中のgh-pagesブランチの中身をsite/に取り出す。
+      # 初回実行時はgh-pagesがまだ存在しないため、失敗しても続行する(|| を使用)
+      - name: 既存のエピソードを取り出す
+        run: |
+          mkdir -p site
+          git fetch origin gh-pages --depth 1 && \
+            git --work-tree=site checkout origin/gh-pages -- . || \
+            echo "gh-pagesブランチがまだ無いため、新規作成します"
+
+      - name: 番組を生成
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: python src/main.py --output site
+
+      # ポッドキャストアプリからのアクセスにJekyll処理は不要なので無効化の目印を置く
+      - name: .nojekyll を配置
+        run: touch site/.nojekyll
+
+      - name: GitHub Pagesへ公開
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+          # 履歴を持たない1コミットだけのブランチとして毎回作り直す
+          # (MP3の履歴が積み重なってリポジトリが肥大化するのを防ぐ)
+          force_orphan: true

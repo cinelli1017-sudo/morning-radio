@@ -6,15 +6,17 @@
 ## 仕組み
 
 ```
-[GitHub Actions] 毎朝5時ごろ(日本時間)に自動実行
+[GitHub Actions] 毎朝5時までに(日本時間)自動実行
    1. RSSからニュース収集(NHK / MONOist / 日経クロステック / ITmedia)
    2. Claude APIで2人の掛け合いラジオ台本を生成
-   3. edge-tts(無料)で音声合成 → 1本のMP3に結合
+   3. VOICEVOX(無料)で音声合成 → ジングル入りの1本のMP3に結合
    4. ポッドキャスト用RSS(feed.xml)を更新
    5. GitHub Pagesで公開
         ↓
 [iPhone] ポッドキャストアプリが自動で新エピソードを受信
 ```
+
+音声はVOICEVOXのキャラクター音声を使用しています(VOICEVOX:青山龍星、VOICEVOX:春日部つむぎ)。
 
 PCの電源が入っていなくても、クラウド(GitHub)上で毎朝自動生成されます。
 
@@ -64,14 +66,19 @@ venv\Scripts\python.exe -m pip install -r requirements.txt
 # .env.example をコピーして .env を作り、APIキーを書き込む
 
 # 実行(output/ フォルダにMP3と台本ができる)
+# ※VOICEVOXエンジンが必要。VOICEVOXアプリ( https://voicevox.hiroshiba.jp )を
+#   起動した状態で実行するか、config.yaml の tts.engine を "edge-tts" に一時変更する
 venv\Scripts\python.exe src\main.py
 ```
 
 ## カスタマイズ(config.yaml)
 
 - **番組の長さ**: `program.target_minutes`(分)
-- **声の変更**: `voices.male` / `voices.female`
-  (使える声の一覧は `venv\Scripts\edge-tts.exe --list-voices` で確認)
+- **声の変更**: `tts.voicevox.speakers` の番号(スタイルID)を変更
+  (声の試聴は https://voicevox.hiroshiba.jp 、IDの一覧はエンジン起動中に http://127.0.0.1:50021/speakers )
+  ※声を変えたら `program.description` のクレジット表記も合わせて更新すること
+- **読み上げ速度**: `tts.voicevox.speed`(1.0が標準)
+- **エンジンの切り戻し**: `tts.engine` を `"edge-tts"` にするとVOICEVOX導入前の音声に戻る
 - **ニュースの取得元**: `news.feeds` にRSSのURLを追加・削除
 - **配信時刻**: `.github/workflows/daily.yml` の `cron`(UTC表記。日本時間−9時間)
   ※GitHub Actionsの定時実行は混雑時に数時間遅れることがあるため、
@@ -83,5 +90,5 @@ venv\Scripts\python.exe src\main.py
 | 項目 | 費用 |
 |---|---|
 | GitHub Actions / Pages | 無料枠内(1日1回・数分の実行) |
-| edge-tts(音声合成) | 無料 |
+| VOICEVOX(音声合成) | 無料 |
 | Claude API(台本生成) | 1回あたり数円程度(claude-sonnet-5使用) |

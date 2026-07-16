@@ -8,7 +8,8 @@
 # --- 番組の基本情報 ---------------------------------------------------
 program:
   title: "モーニング調達ラジオ"
-  description: "生産設備メーカーの購買担当者向けに、前日のニュースを2人のパーソナリティがラジオ風にお届けする自分専用番組"
+  # VOICEVOXの利用規約により、使用キャラクターのクレジット表記を含めている
+  description: "生産設備メーカーの購買担当者向けに、前日のニュースを2人のパーソナリティがラジオ風にお届けする自分専用番組(音声: VOICEVOX:青山龍星、VOICEVOX:春日部つむぎ)"
   author: "morning-radio bot"
   language: "ja"
   # 番組全体の目安の長さ(分)。台本生成時にClaudeへ伝える
@@ -33,11 +34,27 @@ claude:
   # 台本+モデルの内部思考(thinking)の合計上限。少なめだと台本が途中で切れるため余裕を持たせる
   max_tokens: 16000
 
-# --- 音声(edge-tts) --------------------------------------------------
-# 使える声の一覧は「edge-tts --list-voices」コマンドで確認できる
-voices:
-  male: "ja-JP-KeitaNeural"     # メインMC(男性)
-  female: "ja-JP-NanamiNeural"  # アシスタント(女性)
+# --- 音声合成(TTS) ---------------------------------------------------
+tts:
+  # 使うエンジン: "voicevox"(無料・キャラクター音声) または "edge-tts"(切り戻し用)
+  engine: "voicevox"
+
+  # VOICEVOXの設定。speakersの番号は声の種類(スタイルID)。
+  # 声の一覧と試聴: https://voicevox.hiroshiba.jp
+  # 番号の確認: エンジン起動中に http://127.0.0.1:50021/speakers を開く
+  voicevox:
+    url: "http://127.0.0.1:50021"
+    speakers:
+      male: 13    # 青山龍星(ノーマル): 低めの落ち着いた声
+      female: 8   # 春日部つむぎ(ノーマル): 明るめで聞き取りやすい声
+    # 読み上げ速度。1.0が標準。ニュースは少し速めがテンポよく聞こえる
+    speed: 1.1
+
+  # edge-ttsの設定(engine: "edge-tts" にしたときに使われる)
+  edge_tts:
+    voices:
+      male: "ja-JP-KeitaNeural"
+      female: "ja-JP-NanamiNeural"
 
 # --- ニュース収集 ------------------------------------------------------
 news:

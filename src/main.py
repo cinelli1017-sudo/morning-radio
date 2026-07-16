@@ -82,11 +82,11 @@ def main() -> None:
     )
 
     # --- 3. 音声合成 -----------------------------------------------------
-    print("=== 3/4 音声合成(edge-tts) ===")
+    print(f"=== 3/4 音声合成({config['tts'].get('engine', 'edge-tts')}) ===")
     mp3_filename = f"{date_str}.mp3"
     synthesize(
         script_lines,
-        config["voices"],
+        config["tts"],
         site_dir / "episodes" / mp3_filename,
         jingle_path=PROJECT_DIR / "assets" / "jingle.mp3",
         pause_path=PROJECT_DIR / "assets" / "pause.mp3",

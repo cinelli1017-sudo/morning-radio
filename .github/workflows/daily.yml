@@ -18,6 +18,11 @@ on:
     - cron: "23 16 * * *"
   # Actionsのページから「Run workflow」ボタンで手動実行できるようにする
   workflow_dispatch:
+    inputs:
+      publish:
+        description: "生成した番組を公開する(falseにすると公開せず、試聴用ファイルだけ作る)"
+        type: boolean
+        default: true
 
 permissions:
   contents: write  # gh-pagesブランチへの書き込みに必要
@@ -37,6 +42,22 @@ jobs:
       - name: ライブラリをインストール
         run: pip install -r requirements.txt
 
+      # VOICEVOXエンジン(音声合成)をDockerコンテナとして起動する。
+      # 起動には少し時間がかかるため、応答が返るまで最大5分待つ
+      - name: VOICEVOXエンジンを起動
+        run: |
+          docker run -d --name voicevox -p 50021:50021 voicevox/voicevox_engine:cpu-ubuntu20.04-latest
+          for i in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:50021/version > /dev/null; then
+              echo "VOICEVOXエンジンが起動しました"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "VOICEVOXエンジンが起動しませんでした"
+          docker logs voicevox
+          exit 1
+
       # 過去のエピソードを残すため、公開中のgh-pagesブランチの中身をsite/に取り出す。
       # 初回実行時はgh-pagesがまだ存在しないため、失敗しても続行する(|| を使用)
       - name: 既存のエピソードを取り出す
@@ -51,11 +72,24 @@ jobs:
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: python src/main.py --output site
 
+      # 手動実行でpublish=falseにした場合は、公開せず試聴用ファイルとして保存する。
+      # (Actionsの実行ページ下部の「Artifacts」からダウンロードできる)
+      - name: 試聴用ファイルをアップロード(公開しない場合)
+        if: github.event_name == 'workflow_dispatch' && inputs.publish == false
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-episode
+          path: |
+            site/episodes/*.mp3
+            site/episodes/*_script.json
+
       # ポッドキャストアプリからのアクセスにJekyll処理は不要なので無効化の目印を置く
       - name: .nojekyll を配置
+        if: github.event_name == 'schedule' || inputs.publish != false
         run: touch site/.nojekyll
 
       - name: GitHub Pagesへ公開
+        if: github.event_name == 'schedule' || inputs.publish != false
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

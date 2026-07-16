@@ -11,9 +11,11 @@ name: daily-radio
 
 on:
   schedule:
-    # GitHub Actionsの時刻はUTC(世界標準時)。20:00 UTC = 翌朝5:00 JST
-    # ※混雑状況により数分〜数十分遅れることがあります
-    - cron: "0 20 * * *"
+    # GitHub Actionsの時刻はUTC(世界標準時)。16:23 UTC = 深夜1:23 JST
+    # 定時実行は混雑時に3時間以上遅れることがある(実測で3時間半)ため、
+    # 大幅に遅れても朝5時までに配信されるよう深夜に前倒ししている。
+    # また毎時0分は予約が集中して特に遅れやすいので、中途半端な分にしている
+    - cron: "23 16 * * *"
   # Actionsのページから「Run workflow」ボタンで手動実行できるようにする
   workflow_dispatch:
 

@@ -74,6 +74,8 @@ venv\Scripts\python.exe src\main.py
   (使える声の一覧は `venv\Scripts\edge-tts.exe --list-voices` で確認)
 - **ニュースの取得元**: `news.feeds` にRSSのURLを追加・削除
 - **配信時刻**: `.github/workflows/daily.yml` の `cron`(UTC表記。日本時間−9時間)
+  ※GitHub Actionsの定時実行は混雑時に数時間遅れることがあるため、
+  目標時刻より3〜4時間早めに設定しておくのがコツ(現在は深夜1:23開始→朝5時までに配信)
 - **エピソードの保存日数**: `retention_days`
 
 ## 費用の目安

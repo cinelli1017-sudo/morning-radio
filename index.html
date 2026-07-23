@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>モーニング調達ラジオ</title>
+<style>
+  body { font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 16px; background: #1a1a2e; color: #eee; }
+  img.cover { width: 180px; border-radius: 16px; display: block; margin: 16px auto; }
+  h1 { text-align: center; font-size: 1.4rem; }
+  .btn { display: block; text-align: center; background: #e97451; color: #fff; text-decoration: none;
+         padding: 14px; border-radius: 10px; margin: 10px 0; font-weight: bold; border: none;
+         width: 100%; font-size: 1rem; cursor: pointer; }
+  .note { color: #aaa; font-size: 0.85rem; }
+  ul { list-style: none; padding: 0; }
+  li { background: #26264a; border-radius: 10px; padding: 12px; margin: 10px 0; }
+  audio { width: 100%; }
+  code { background: #333; padding: 2px 6px; border-radius: 4px; word-break: break-all; }
+</style>
+</head>
+<body>
+  <img class="cover" src="cover.png" alt="番組アートワーク">
+  <h1>モーニング調達ラジオ</h1>
+
+  <a class="btn" href="podcast://cinelli1017-sudo.github.io/morning-radio/feed.xml">Apple Podcastsでフォローする</a>
+  <button class="btn" onclick="navigator.clipboard.writeText('https://cinelli1017-sudo.github.io/morning-radio/feed.xml').then(()=>alert('コピーしました'))">
+    フィードURLをコピーする
+  </button>
+  <p class="note">上のボタンで開けない場合は、コピーしたURLをポッドキャストアプリの
+  「URLで番組をフォロー」に貼り付けてください。<br>
+  フィードURL: <code>https://cinelli1017-sudo.github.io/morning-radio/feed.xml</code></p>
+
+  <h2>エピソード</h2>
+  <ul>
+      <li>
+        <p><strong>7月24日(金) モーニング調達ラジオ</strong>(約6分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-24.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月23日(木) モーニング調達ラジオ</strong>(約6分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-23.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月22日(水) モーニング調達ラジオ</strong>(約8分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-22.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月21日(火) モーニング調達ラジオ</strong>(約7分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-21.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月20日(月) モーニング調達ラジオ</strong>(約6分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-20.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月19日(日) モーニング調達ラジオ</strong>(約7分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-19.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月18日(土) モーニング調達ラジオ</strong>(約7分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-18.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月17日(金) モーニング調達ラジオ</strong>(約6分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-17.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月16日(木) モーニング調達ラジオ</strong>(約10分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-16.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月15日(水) モーニング調達ラジオ</strong>(約9分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-15.mp3"></audio>
+      </li>
+      <li>
+        <p><strong>7月14日(火) モーニング調達ラジオ</strong>(約10分)</p>
+        <audio controls preload="none" src="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-07-14.mp3"></audio>
+      </li>
+  </ul>
+</body>
+</html>

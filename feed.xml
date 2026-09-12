@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>モーニング調達ラジオ</title>
+    <description>生産設備メーカーの購買担当者向けに、前日のニュースを2人のパーソナリティがラジオ風にお届けする自分専用番組(音声: VOICEVOX:青山龍星、VOICEVOX:春日部つむぎ)</description>
+    <link>https://cinelli1017-sudo.github.io/morning-radio</link>
+    <language>ja</language>
+    <atom:link href="https://cinelli1017-sudo.github.io/morning-radio/feed.xml" rel="self" type="application/rss+xml"/>
+    <itunes:author>morning-radio bot</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://cinelli1017-sudo.github.io/morning-radio/cover.png"/>
+    <itunes:category text="News">
+      <itunes:category text="Business News"/>
+    </itunes:category>
+    <image>
+      <url>https://cinelli1017-sudo.github.io/morning-radio/cover.png</url>
+      <title>モーニング調達ラジオ</title>
+      <link>https://cinelli1017-sudo.github.io/morning-radio</link>
+    </image>
+    <item>
+      <title>9月13日(日) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年9月13日、日曜日の朝をお届けします。</description>
+      <pubDate>Sun, 13 Sep 2026 03:32:53 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-13.mp3" length="1896572" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-13.mp3</guid>
+      <itunes:duration>0:05:16</itunes:duration>
+    </item>
+    <item>
+      <title>9月12日(土) モーニング調達ラジオ</title>
+      <description>おはようございます。9月12日土曜日、モーニング調達ラジオの時間です。</description>
+      <pubDate>Sat, 12 Sep 2026 04:17:52 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-12.mp3" length="2818748" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-12.mp3</guid>
+      <itunes:duration>0:07:49</itunes:duration>
+    </item>
+    <item>
+      <title>9月11日(金) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年9月11日金曜日の放送です。</description>
+      <pubDate>Fri, 11 Sep 2026 04:14:40 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-11.mp3" length="2787212" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-11.mp3</guid>
+      <itunes:duration>0:07:44</itunes:duration>
+    </item>
+    <item>
+      <title>9月10日(木) モーニング調達ラジオ</title>
+      <description>おはようございます。9月10日、木曜日の「モーニング調達ラジオ」始まります。</description>
+      <pubDate>Thu, 10 Sep 2026 04:24:49 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-10.mp3" length="2336636" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-10.mp3</guid>
+      <itunes:duration>0:06:29</itunes:duration>
+    </item>
+    <item>
+      <title>9月9日(水) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年9月9日水曜日のスタートです。</description>
+      <pubDate>Wed, 09 Sep 2026 04:33:55 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-09.mp3" length="2901548" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-09.mp3</guid>
+      <itunes:duration>0:08:03</itunes:duration>
+    </item>
+    <item>
+      <title>9月8日(火) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年9月8日火曜日の放送です。</description>
+      <pubDate>Tue, 08 Sep 2026 05:06:48 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-08.mp3" length="3041516" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-08.mp3</guid>
+      <itunes:duration>0:08:26</itunes:duration>
+    </item>
+    <item>
+      <title>9月7日(月) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年9月7日月曜日の放送です。</description>
+      <pubDate>Mon, 07 Sep 2026 03:28:26 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-07.mp3" length="2035100" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-07.mp3</guid>
+      <itunes:duration>0:05:39</itunes:duration>
+    </item>
+    <item>
+      <title>9月6日(日) モーニング調達ラジオ</title>
+      <description>おはようございます、9月6日日曜日のモーニング調達ラジオです。</description>
+      <pubDate>Sun, 06 Sep 2026 03:29:23 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-06.mp3" length="2638604" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-06.mp3</guid>
+      <itunes:duration>0:07:19</itunes:duration>
+    </item>
+    <item>
+      <title>9月5日(土) モーニング調達ラジオ</title>
+      <description>おはようございます。モーニング調達ラジオ、2026年9月5日、土曜日の放送です。</description>
+      <pubDate>Sat, 05 Sep 2026 04:06:05 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-05.mp3" length="2566172" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-05.mp3</guid>
+      <itunes:duration>0:07:07</itunes:duration>
+    </item>
+    <item>
+      <title>9月4日(金) モーニング調達ラジオ</title>
+      <description>おはようございます、9月4日金曜日、モーニング調達ラジオの時間です。</description>
+      <pubDate>Fri, 04 Sep 2026 04:25:13 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-04.mp3" length="2377100" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-04.mp3</guid>
+      <itunes:duration>0:06:36</itunes:duration>
+    </item>
+    <item>
+      <title>9月3日(木) モーニング調達ラジオ</title>
+      <description>おはようございます、9月3日木曜日のモーニング調達ラジオです。</description>
+      <pubDate>Thu, 03 Sep 2026 04:30:16 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-03.mp3" length="2078588" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-03.mp3</guid>
+      <itunes:duration>0:05:46</itunes:duration>
+    </item>
+    <item>
+      <title>9月2日(水) モーニング調達ラジオ</title>
+      <description>おはようございます、9月2日水曜日の「モーニング調達ラジオ」始まります。</description>
+      <pubDate>Wed, 02 Sep 2026 04:31:13 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-02.mp3" length="2306828" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-02.mp3</guid>
+      <itunes:duration>0:06:24</itunes:duration>
+    </item>
+    <item>
+      <title>9月1日(火) モーニング調達ラジオ</title>
+      <description>おはようございます。9月1日、火曜日のモーニング調達ラジオです。</description>
+      <pubDate>Tue, 01 Sep 2026 06:35:31 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-09-01.mp3" length="2380268" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-09-01.mp3</guid>
+      <itunes:duration>0:06:36</itunes:duration>
+    </item>
+    <item>
+      <title>8月31日(月) モーニング調達ラジオ</title>
+      <description>おはようございます、モーニング調達ラジオ、2026年8月31日月曜日の放送です。</description>
+      <pubDate>Mon, 31 Aug 2026 04:27:30 +0900</pubDate>
+      <enclosure url="https://cinelli1017-sudo.github.io/morning-radio/episodes/2026-08-31.mp3" length="2762876" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-31.mp3</guid>
+      <itunes:duration>0:07:40</itunes:duration>
+    </item>
+  </channel>
+</rss>

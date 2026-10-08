@@ -1,0 +1,322 @@
+[
+  {
+    "speaker": "male",
+    "text": "おはようございます、7月17日金曜日の「モーニング調達ラジオ」始まります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今日も購買や調達のお仕事をされている皆さんに役立つニュースをお届けします。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "今日は半導体、サイバー攻撃、関税、国産AI、システム障害、それから製造現場の保守人材まで、調達リスクに直結する話題が盛りだくさんです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "それでは早速、本編に参りましょう。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては半導体の話題です。台湾のTSMCが発表した4月から6月の決算、売り上げと最終的な利益がともに過去最高を更新しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "AI向けの半導体がやっぱり強いんですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。AIのサーバー向けの需要が伸び続けていて、工場がフル稼働の状態が続いています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、価格交渉がなかなか難しそうな状況ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "その通りです。需要が高いままだと価格は下がりにくいですし、注文してから届くまでの期間も読みにくくなります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "半導体を使う設備を発注する時は、余裕を持って動いた方が良さそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、特に先端の半導体を使う制御機器などは、早めに見積もりを取っておくのがおすすめです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今のうちに仕入先と情報交換しておきたいところですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いてはアメリカ経済の話題です。6月の小売業の売り上げは、5月と比べて0.2パーセント増えました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "消費は堅調に見えますけど、気になる材料もあるんですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。中東のイラン情勢が緊迫していて、原油価格が再び上がる傾向にあります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "原油が上がると、輸送コストや資材の価格にも響いてきますよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "まさにそこです。日銀の調査でも、1年後に物価が今より上がると答えた人の割合が90パーセントを超えて、これまでで最も高くなりました。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、価格上昇を見込んだ予算組みが必要になりそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、輸入原材料を使う部材は、早めに仕入先へ価格の動向を確認しておくと安心です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "様子を見ているうちに価格が上がってしまう、ということもありますからね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては冷凍食品大手ニチレイの話題です。サイバー攻撃によるシステム障害が続いていましたが、17日から業務を順次再開するとのことです。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "復旧まで、結構時間がかかりましたね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、安全が確認された倉庫や工場から順番に再開する方針で、全面復旧まではまだ時間がかかりそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "取引先として発注している企業は、出荷の遅れに注意が必要ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。外部からの受発注システムに、まだ影響が残っている可能性があるので、事前に納期を確認しておくと良いです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "こういうサイバー攻撃、他の会社にも広がる可能性がありますよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "その通りです。自社の仕入先がサイバー攻撃を受けた場合に、代わりの調達先をどこにするか、あらかじめリストアップしておくのも大事な備えです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "備えあれば憂いなし、ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては関税の話題です。アメリカのトランプ政権が、ブラジルからの輸入品に25パーセントの追加関税を課すことを決めました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "ブラジル側は反発しているんですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、正当化する根拠がないと強く反論していて、今後、対抗措置が取られる可能性もあります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "ブラジルから資材や部品を仕入れている企業には、直接影響がありそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。特に鉄鉱石や農産物に関連する資材を使う業種は、コストの見直しが必要になるかもしれません。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "関税の動き、これからも目が離せませんね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、貿易摩擦が広がるほど、調達先を一か国に集中させないことの重要性が高まってきます。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "分散調達、改めて見直す時期かもしれませんね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては国産AIの話題です。新会社ノエトラが、アメリカのエヌビディアから最新の半導体を搭載した次世代システムを導入すると発表しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "経済産業省も後押ししているそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、フロンティアプロジェクトという新しい取り組みが始まって、国内44社が共同で出資しています。ロボットなどを自律的に動かす、フィジカルAIという技術の基盤づくりが狙いです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "フィジカルAIというのは、現実のモノを動かすAI、ということですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。工場の自動化にも直結する技術なので、製造業にとっては特に注目のプロジェクトです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "国産のAI基盤ができると、調達の面でも変化がありそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、海外のAIサービスに頼らない選択肢が増えることで、将来的には調達先の多様化につながるかもしれません。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "設備投資の計画にも関わってきそうな話ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いてはシステム障害の話題です。16日の夕方、アマゾンのクラウドサービスAWSで障害が発生し、PayPayなど複数のサービスが利用しにくくなりました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "決済ができないと、業務にも影響が出そうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、それに加えて、ビザ傘下の決済基盤サイバーソースでも処理のタイムアウトが発生していて、クレジットカードの決済にも影響が出ました。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買業務でオンライン決済を使っている場合は、要注意ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。特に急ぎの支払いがある時のために、障害が起きた際の代わりの支払い手段を、事前に確認しておくと安心です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "クラウドサービス一つの障害で、こんなに広範囲に影響が出るんですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、大手クラウドに依存するリスクを、改めて考えさせられる出来事でした。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "自社のシステムも、他社任せの部分を一度点検してみたいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては製造現場の話題です。八千代ソリューションズの調査で、自動化が進む一方、保全業務の負荷が高まっているのに、人員を増やしていない企業がおよそ85パーセントに上ることが分かりました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "設備は増えても、人は増えていないということですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、そのため一人当たりの負担が重くなっていて、設備トラブルへの対応が遅れるリスクも出てきています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、保守部品の在庫管理がより重要になりそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "その通りです。人手が足りない現場では、部品の手配や交換のタイミングが遅れがちなので、予備品を多めに確保しておく判断も必要になります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "設備メーカー側も、保守のしやすさを提案する余地がありそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、これからは省人化に対応した保守サービスの提案が、選ばれる基準の一つになりそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "設備を選ぶ時も、保守のしやすさまで含めて比較したいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "それでは今日のまとめです。半導体は高値が続き、サイバー攻撃や関税、システム障害など、調達を取り巻くリスクは多方面に広がっています。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "情報を早めにキャッチして、代替案をあらかじめ用意しておくことが大切ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、備えを一つずつ積み重ねていけば、どんな変化にも対応できます。今日も一日、しっかり準備して乗り越えていきましょう。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "リスナーの皆さんの調達業務を、いつも応援しています。それではまた明日、お会いしましょう。",
+    "new_topic": false
+  }
+]

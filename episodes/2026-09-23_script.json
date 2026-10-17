@@ -1,0 +1,327 @@
+[
+  {
+    "speaker": "male",
+    "text": "おはようございます。モーニング調達ラジオ、2026年9月23日、水曜日の放送です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "今日は株式市場の最高値更新から、日米首脳会談、そして深刻な台風被害まで幅広くお届けします。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "さらにAI関連のニュースも盛りだくさんです。調達のヒントになる情報、しっかりお届けしていきます。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては経済のニュースです。ニューヨーク株式市場でナスダック株価指数が、およそ3か月半ぶりに最高値を更新しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "おお、久しぶりの高値更新ですね。何がきっかけだったんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "イラン情勢への懸念がやわらいだことと、AI関連の銘柄に買い注文が集まったことが大きいです。ハイテク株の比率が高いナスダックらしい動きですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "AI関連というと、半導体メーカーなども含まれますよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。半導体や関連機器メーカーの株価が上がると、設備投資が活発になっている証拠でもあります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、また半導体不足が起きないか気になるところです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "おっしゃる通りです。AI需要の高まりで半導体の争奪戦が再燃する可能性もあるので、納期の動向は引き続きチェックしておきたいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "価格交渉のタイミングも見極めが必要そうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、日米首脳会談のニュースです。高市総理大臣とトランプ大統領の会談が、日本時間の今日午前2時すぎからニューヨークの国連本部で始まりました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "就任後、初めての本格的な会談になるんですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。貿易や関税の扱い、それから安全保障の協力について話し合われる見通しです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買部門としては、関税の話が一番気になりますね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "ですね。特に鉄鋼やアルミなど、すでに追加の関税がかかっている品目について、見直しの話が出るか注目です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "もし関税が変わったら、輸入コストの計算をすぐ見直さないといけませんね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "会談の結果次第で、仕入れ先の選定や価格交渉の材料になりますから、続報はしっかり追っておきましょう。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "はい、続報が入り次第お伝えしますね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いてのニュースです。台風25号の影響で、千葉県と神奈川県であわせて7人が死亡、5人が行方不明となっています。道路の崩落も起きています。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "これはかなり深刻な被害ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "伊豆諸島や関東南部を中心に記録的な大雨となって、土砂災害や河川の氾濫が相次ぎました。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "道路が崩れたということは、物流にも影響が出そうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "その通りです。幹線道路が通行止めになっている地域もあって、トラック輸送のルート変更や納期の遅れが出る可能性があります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、被災地に工場や物流拠点を持つ仕入れ先がないか、早めに確認しておいたほうがよさそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい。代替の輸送ルートの確保や、納期遅延の連絡が来た場合の対応を事前に考えておくと安心です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "安否確認とあわせて、サプライチェーン全体への影響を早めに把握したいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、ITの話題です。アマゾンが、メタが開発したAIエージェント、名前はミューズというんですが、これによる自社サイトでの代理購入をブロックしたと報じられました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "AIが自動で買い物をしてくれるサービス、ということですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。無断でのアクセスやセキュリティ上のリスクを理由に、アマゾンが締め出した形です。一方でメタは、ネット通販サイトを構築できるサービス、ショッピファイの全店舗への対応を発表していて、連携を広げています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "大手同士でAIエージェントを巡る駆け引きが始まっているんですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね。今後、企業の購買活動でもAIエージェントが発注や見積もり取得を代行する場面が増えてくると見られています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "私たちの調達業務にも、いずれAIエージェント経由の取引が入ってくるかもしれませんね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい。取引先がどのプラットフォームに対応しているか、今のうちから情報収集しておくといいと思います。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "仕入れ先選びの新しい基準になりそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いてはAIモデルのニュースです。イーロン・マスク氏率いる会社が、新しいAIモデル、グロック4.7を発表しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "価格はどうなんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "前のモデルと同じ価格、同じ速度を維持しながら、プログラム作成や長時間の業務タスクの性能が大きく強化されています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "価格据え置きで性能アップというのは、ユーザーにはうれしいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね。競合の最新モデルと比べても、低コストで高速だとアピールしています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買業務でも、見積もりの比較や契約書のチェックにAIを使う場面が増えていますけど、こういうコスト据え置きの動きはありがたいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "社内でAIツールを導入する際も、価格交渉の材料になりますし、複数のサービスを比較検討する余地が広がりますね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "ツール選定の担当者は要チェックですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、グーグルの新しいノートパソコン、グーグルブックの予約受付が始まったというニュースです。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "お値段はどれくらいなんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "899ドル、日本円でおよそ14万円からとなっています。ただ、今のところ日本は発売地域に入っていません。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "残念ですね。どんな特徴があるんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "スマートフォンのOSであるアンドロイドをベースに、パソコンのような機能を組み合わせた端末で、AIやスマホ連携を強化したフラグシップモデルという位置づけです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "自社では作らずに、他のメーカーに製造を任せる形なんですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。エイサーやエイスースなど5社が展開して、最長10年間のOSアップデートが受けられるのも特徴です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買の立場からすると、長期サポートがあるのは資産管理の面でも助かりますね。社用パソコンの選定基準にも影響しそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "日本での展開が始まったら、コストパフォーマンスをしっかり比較したいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、人工知能の会社、オープンAIのニュースです。数学者が設立した独立組織と連携すると発表しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "独立組織というのは、どういう役割なんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "AIが出した数学的な成果を評価したり、公表の仕方について助言を受ける組織です。オープンAIの社内モデルが100件以上の未解決問題を解決したことを受けての動きです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "それはすごい成果ですけど、何か問題があったんですか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "急いで成果を発表しすぎたり、誰の功績かという帰属の問題で、数学界から批判が出ていたんです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "なるほど、第三者の目を入れて透明性を確保しようということですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうです。この組織は独立して運営されて、他の会社への助言も行う方針です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "技術の急速な進化に対して、業界全体でルール作りが進んでいるのを感じますね。私たちが導入するAIツールも、こういう検証の仕組みがあるか確認したいところです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いて、今日のまとめです。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "市場は最高値更新で明るい話題がある一方、台風被害では物流への影響に十分な注意が必要ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "日米首脳会談の行方や、AIを巡る各社の動きも、これからの調達業務に直結してきます。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今日一日、情報収集を怠らず、リスナーの皆さんの仕事が順調に進むよう願っています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "それでは、モーニング調達ラジオ、今日も一日頑張っていきましょう。",
+    "new_topic": false
+  }
+]

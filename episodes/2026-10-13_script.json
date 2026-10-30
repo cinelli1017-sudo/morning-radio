@@ -1,0 +1,282 @@
+[
+  {
+    "speaker": "male",
+    "text": "おはようございます、10月13日火曜日、モーニング調達ラジオの時間です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今朝は交通トラブルから半導体のサプライチェーン、AI活用の最新事情まで、購買担当者の皆さんに関わる話題を幅広くお届けします。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、通勤や出張にも関わるニュースから。九州新幹線が、13日の始発から博多と鹿児島中央の間、全線で運転を見合わせています。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "原因は何だったんですか？",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "12日の検査で、車両のパンタグラフ、電気を取り込む装置に異常が見つかって、架線の点検作業をしているそうです。再開の見通しはまだ立っていません。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "出張で新幹線を使う方、多いですよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね、九州エリアに工場や仕入先を持つ方は、今日の出張や荷物の輸送スケジュールに影響が出る可能性があります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "念のため、取引先への納期確認の連絡を早めにしておいた方がよさそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、運転再開の情報はこまめにチェックしておきましょう。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、国の経済政策に関わる人事のニュースです。高市総理大臣が12日、片山財務大臣が世界銀行とIMF、国際通貨基金の合同開発委員会の次の議長に就任すると明らかにしました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "これはどんな意味を持つんですか？",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "世界の開発支援や金融政策の方向性を話し合う重要な会議のトップに、日本の財務大臣が就くということです。日本の発言力が強まる可能性があります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "為替や金利の動きにも影響してくるんでしょうか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "直接的ではないですが、国際的な金融政策の議論に日本が関わりやすくなるので、中長期的には為替の安定にもプラスに働くという見方もあります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買担当としては、為替の動向は輸入コストに直結しますから、注目したいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね、今後の国際会議での発言にも注目です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いて、自動車業界の調達に関わるニュースです。9月に中国から輸出された新車はおよそ105万台で、去年の同じ月より61パーセント増えました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "かなりの増加ですね、背景は何ですか？",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "世界的にガソリンの価格が上がっていて、EV、電気自動車などの需要が伸びているとみられています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "中国製のEVや部品を仕入れている会社にとっては、どんな影響がありますか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "供給量が増える分、価格競争が進んで調達コストが下がる可能性があります。一方で、輸出が急増すると港や船の手配が混み合って、納期が読みにくくなることもあります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "価格だけじゃなくて、物流の混雑にも気を配る必要がありそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、中国関連の仕入れがある方は、船便の予約状況も早めに確認しておくと安心です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、半導体の部材に関するニュースです。住友ベークライトが、先端半導体パッケージ向けの封止材の生産能力を、中国とシンガポールで増強すると発表しました。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "封止材というのはどんなものですか？",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "半導体のチップを保護するための樹脂材料です。特にMUFと呼ばれる種類の封止材は、生産能力をおよそ2倍にするそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "半導体はこのところ品薄が心配されていましたよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね、AI向けの高性能チップの需要が伸びていて、部材不足が懸念されていました。今回の増強は、そうした需要の高まりに対応する動きです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "半導体を使う製品を作っているメーカーにとっては、少し安心材料になりますね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、ただ供給が整うまでには時間がかかりますので、引き続き仕入先との情報共有は大切です。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いて、AI活用の動きです。日立製作所が、競合他社の経営計画などを分析して、自社の戦略をアドバイスするサービスを始めるなど、経営の中枢でAIを使う動きが相次いでいます。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "経営判断にもAIが入ってくるんですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、これまでは現場の業務効率化が中心でしたが、今は経営戦略という、より上流の判断にもAIが関わり始めています。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買の現場にも、こうした流れは来るんでしょうか。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "十分考えられます。仕入先の選定や価格交渉の材料を、AIが分析してくれる時代が近づいているということです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "情報収集の仕方も、これから変わっていきそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね、AIをどう使いこなすかが、これからの調達業務の差になってくるかもしれません。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いては、調達業務の効率化に直結する話題です。三菱ふそうトラック・バスが、中古トラックの入札会システムをSalesforceを使ってデジタル化し、集計業務を3時間以上短縮したそうです。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "3時間というと、かなり大きな短縮ですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、これまで手作業で行っていた入札の集計を自動化したことで、担当者の負担が大きく減ったということです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "購買の仕事でも、見積もりの比較や集計って手間がかかりますよね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "まさにそうです。同じような仕組みを使えば、複数の仕入先からの見積もり比較も効率化できる可能性があります。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "こういう事例は、自社の業務改善のヒントになりそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、入札や見積もりの業務が多い方は、参考にしてみる価値がありそうです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "続いて、国会の動きです。今日から衆議院の予算委員会で、高市総理大臣とすべての閣僚が出席して基本的な質疑が始まります。食料品の消費税減税や経済・財政政策が、主な論点です。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "消費税の議論は、企業にとっても気になるところですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "そうですね、もし食料品の消費税が見直されるとなると、価格設定や契約の仕方にも影響が出てきます。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "仕入れ価格の交渉にも関わってきそうですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、税制が変わるタイミングでは、契約書の見直しや価格転嫁のルール確認が必要になることが多いです。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今日からの審議の行方、注目しておきたいですね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "はい、今後の動向は改めてお伝えしていきます。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "それでは今日の要点をまとめます。",
+    "new_topic": true
+  },
+  {
+    "speaker": "female",
+    "text": "交通の乱れや為替、半導体部材の供給など、調達の現場に直結する動きが多い一日でしたね。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "情報をこまめにチェックして、仕入先との連携を大切にしていきましょう。",
+    "new_topic": false
+  },
+  {
+    "speaker": "female",
+    "text": "今日も一日、お仕事頑張ってください。",
+    "new_topic": false
+  },
+  {
+    "speaker": "male",
+    "text": "モーニング調達ラジオでした。",
+    "new_topic": false
+  }
+]
